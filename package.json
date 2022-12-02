@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf images/compress/",
+    "compress": "yarn clean && mkdirp ./images/compress && node main.js"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +16,13 @@
     "imagemin": "^8.0.1",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
     "imagemin-optipng": "^8.0.0",
+    "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^10.0.1",
     "imagemin-webp": "^7.0.0"
+  },
+  "devDependencies": {
+    "mkdirp": "^1.0.4"
   }
 }
